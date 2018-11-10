@@ -1,0 +1,26 @@
+[user]
+	name = Charles
+	email = charles.quelos-extern@dbschenker.com
+[url "https://"]
+        insteadOf = git://
+[alias]
+	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" # /!\ achtung
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    full = log master --all --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    cf = log --all --pretty=format:'%x09%C(auto)%h %C(bold blue)%ar%x09%Creset| %C(magenta)%an%Creset | %C(auto)%s%d' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    pr = pull --rebase=preserve
+[credential]
+	helper = store
+#[core]
+#       autocrlf = false
+#       hooksPath = c:\\Users/NAN98W4L72/projects/isocel/front/controle-facture-frontend
+#[http]
+#	sslVerify = false
+[push]
+	default = matching
+[core]
+	trustctime = false
