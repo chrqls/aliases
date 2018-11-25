@@ -1,6 +1,6 @@
 [user]
-	name = Charles
-	email = charles.quelos-extern@dbschenker.com
+    name = Charles Quelos
+    email = charles.quelos@gmail.com
 [url "https://"]
         insteadOf = git://
 [alias]
@@ -20,7 +20,7 @@
 #       hooksPath = c:\\Users/NAN98W4L72/projects/isocel/front/controle-facture-frontend
 #[http]
 #	sslVerify = false
-[push]
-	default = matching
-[core]
-	trustctime = false
+#[push]
+#	default = matching
+#[core]
+#	trustctime = false

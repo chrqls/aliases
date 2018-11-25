@@ -1,8 +1,8 @@
 # --- PATH ---
-export PATH_USER='/c/Users/quelosch'
-export PATH_PROJECTS=$PATH_USER'/projects'
+export PATH_USER='/Users/chrqls'
+export PATH_PROJECTS=$PATH_USER'/Documents/github\ forks'
 export PATH_FRONT=$PATH_PROJECTS'/fridge'
-export PATH_BACK=$PATH_PROJECTS'/Bridge'
+export PATH_BACK=$PATH_PROJECTS'/backend'
 export PATH_ZSH='~/.zshrc'
 export PATH_COLA='/c/Program\ Files\ (x86)'
 
@@ -12,9 +12,8 @@ export REST_URL=http://127.0.0.1:8080/Bridge
 alias ll='ls -lAF'
 alias la='ls -laAF'
 alias helpp='history | grep'
-alias editbash='vi '$PATH_USER'/.bash_profile'
 alias editzsh='vi '$PATH_ZSH
-alias editaliases='vi '$PATH_USER'/.bash_aliases'
+alias editaliases='vi '$PATH_PROJECTS'/aliases/.bash_aliases'
 alias bhl='bash -l'
 alias zhl='zsh -l'
 
