@@ -1,6 +1,6 @@
 # --- PATH ---
-export PATH_USER='/Users/chrqls'
-export PATH_PROJECTS=$PATH_USER'/Documents/github\ forks'
+export PATH_USER='/home/chrqls'
+export PATH_PROJECTS=$PATH_USER'/projects'
 export PATH_FRONT=$PATH_PROJECTS'/fridge'
 export PATH_BACK=$PATH_PROJECTS'/backend'
 export PATH_ZSH='~/.zshrc'
