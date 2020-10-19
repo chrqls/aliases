@@ -1,8 +1,8 @@
 # --- PATH ---
-export PATH_USER='/Users/chrqls'
-export PATH_PROJECTS=$PATH_USER'/Documents/github\ forks'
-export PATH_FRONT=$PATH_PROJECTS'/fridge'
-export PATH_BACK=$PATH_PROJECTS'/backend'
+export PATH_USER='/c/Users/chrqls'
+export PATH_PROJECTS=$PATH_USER'/projects'
+export PATH_FRONT=$PATH_PROJECTS'/gobox-front'
+export PATH_BACK=$PATH_PROJECTS'/auvray-back-end'
 export PATH_ZSH='~/.zshrc'
 export PATH_COLA='/c/Program\ Files\ (x86)'
 
@@ -46,12 +46,16 @@ alias gob='cd '$PATH_BACK
 stashShow() {
     git stash show -p stash@{$1} 
 }
+stashPop() {
+    git stash pop stash@{$1} 
+}
 stashDrop()  {
     git stash drop stash@{$1}
 }
 alias stash='git stash'
 alias stal='git stash list'
 alias stas=stashShow
+alias pop=stashPop
 alias stadelete=stashDrop
 #alias stap='sudo git stash && sudo git pull && sudo git stash pop'
 
@@ -85,6 +89,7 @@ alias gf='git fetch' # -p
 alias pull='git pull origin'
 alias gpr='git pull --rebase origin'
 alias push='git push origin'
+alias pushb='git push --set-upstream origin'
 
 rebaseCommits() {
     git rebase -i HEAD~$1 
@@ -100,12 +105,14 @@ alias gaa='git add -A'
 alias grm='git rm' # --cached: stage the file for deletion
 alias gsd='git ls-files --deleted'
 alias gb='git branch'
+alias gub='git remote update origin --prune'
 alias gd='git diff'
 alias go='git checkout'
 
 ## Revert (unstage? uncommit ? lequel est lequel)
-alias cca='git reset HEAD'
-alias gu='git reset --hard'
+alias gau='git reset HEAD' # unstage a staged file
+alias gcu='git reset --soft HEAD^' # revert to staged state
+alias reset='git reset --hard'
 alias ccc='git revert HEAD --no-edit'
 alias gdelete='git push origin --delete' #<remote-branch-to-delete>
 
