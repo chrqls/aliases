@@ -55,7 +55,7 @@ Show export variables: `export -p`
 Concernant l'installation:
 ```
 sudo apt search docker
-sudo apt install docker.io 
+sudo apt install docker.io docker-compose
 ```
 
 Insérer dans `/etc/hosts`:
@@ -90,6 +90,7 @@ docker exec -it <TAB_image> bash
 Monter les services du projet ou un spécifique
 ```
 docker-compose up -d <service_ou_pas> (postgres)
+docker-compose up --build -V postgres (--build ?? -V ??)
 ```
 
 Récupérer et supprimer une image:
@@ -104,9 +105,15 @@ sudo docker pull debian:stretch # si registry-1.docker.io est dans /etc/hosts
 sudo docker pull gitlab-registry.forge.diplomatie.gouv.fr/library/debian:stretch # sinon
 ```
 
-Vous êtes au bout du rouleau ? il reste une solution:
+J'ai souvent consulté `/etc/docker/certs.d/artifactory-registry.domain.com/`.
+
+Au bout du rouleau ? il reste une solution:
 ```
 sudo apt -V install gnupg2 pass
 ```
 #### Shell linux
 systemctl
+```
+sudo systemctl restart docker
+sudo systemctl status docker
+```
