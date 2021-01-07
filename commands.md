@@ -58,7 +58,7 @@ sudo apt search docker
 sudo apt install docker.io docker-compose
 ```
 
-Insérer dans `/etc/hosts`:
+Insérer dans `/etc/hosts` la conf suivante et redémarrer docker avec `sudo systemctl restart docker`:
 ```
 # Si Station admin
 10.106.6.33	AZ017WB01G033 forge.diplomatie.gouv.fr gitlab-registry.forge.diplomatie.gouv.fr registry-1.docker.io
