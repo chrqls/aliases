@@ -93,21 +93,29 @@ docker-compose up -d <service_ou_pas> (postgres)
 docker-compose up --build -V postgres (--build ?? -V ??)
 ```
 
-Récupérer et supprimer une image:
+Arrêter une image
 ```
-docker pull artifactory-registry.domain.com/docker-images/ci-tools:feat-add-python
-docker rmi artifactory-registry.domain.com/docker-images/ci-tools:feat-add-python
+docker stop <id>
+docker-compose stop <id> (si au niveau du docker compose)
 ```
 
-2 pull possibles
+Supprimer une image:
 ```
+docker rmi artifactory-registry.domain.com/docker-images/ci-tools:feat-add-python
+docker rm <id>
+docker-compose down <id> (si au niveau du docker compose)
+```
+
+Le `pull` permet de récupérer une image:
+```
+docker pull artifactory-registry.domain.com/docker-images/ci-tools:feat-add-python
 sudo docker pull debian:stretch # si registry-1.docker.io est dans /etc/hosts
 sudo docker pull gitlab-registry.forge.diplomatie.gouv.fr/library/debian:stretch # sinon
 ```
 
 J'ai souvent consulté `/etc/docker/certs.d/artifactory-registry.domain.com/`.
 
-Au bout du rouleau ? il reste une solution:
+Au bout du rouleau ? il reste une solution (spécifique au MAE je pense):
 ```
 sudo apt -V install gnupg2 pass
 ```
