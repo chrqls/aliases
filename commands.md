@@ -125,3 +125,9 @@ systemctl
 sudo systemctl restart docker
 sudo systemctl status docker
 ```
+
+service
+```
+sudo service postgresql status
+sudo service postgresql stop
+```
