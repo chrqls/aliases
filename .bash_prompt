@@ -128,5 +128,13 @@ DARK="\[\e[38;5;238m\]"
 MUSTARD="\[\e[38;5;214m\]"
 FUCHSIA="\[\e[38;5;161m\]"
 
+# DRAFT
+  #PS1='${debian_chroot:+($debian_chroot)}\[\033[04;32m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[01;37m\]\$'
+  #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  #export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+  #PS1="\u@\h \A \[\e[32m\]\w \[\e[91m\]\$(git_branch)\[\e[00m\]$q "
+  #PS1="\[\e[38;5;151m\]\u\[\e[38;5;245m\]@\[\e[38;5;36m\]\h \e[1;7m\[\e[38;5;238m\]\A\e[0;27m \[\e[38;5;214m\]\w \[\e[38;5;161m\]\$(git_branch)\[\e[00m\]$ "
+# DRAFT (END)
+
 #export PS1="\[\e[38;5;151m\]\u\[\e[38;5;245m\]@\[\e[38;5;36m\]\h \e[1;7m\[\e[38;5;238m\]\A\e[0;27m \[\e[38;5;214m\]\w \[\e[38;5;161m\]\$(__git_ps1)\[\e[00m\]$ "
 export PS1="${WATERLIGHT}\u${GREY}@${WATER}\h ${BOLDnREVERSED}${DARK}\A${NORMAL} ${MUSTARD}\w ${FUCHSIA}\$(__git_ps1)${NONE}$ "
