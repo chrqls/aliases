@@ -1,3 +1,20 @@
+#### VSCode
+```json
+{
+  "version": "0.2.0",
+  "configurations": [{
+      "name": "Awesome debug that works",
+      "request": "launch",
+      "type": "node",
+      "program": "${workspaceFolder}/index.js",
+      "cwd": "${workspaceFolder}",
+      "args": ["--preserve-symlinks", "--preserve-symlinks-main"],
+      "runtimeArgs": ["--preserve-symlinks", "--preserve-symlinks-main"],
+      "sourceMaps": true
+  }]
+}
+```
+
 #### ng
 ```shell
 ng serve 
@@ -113,9 +130,11 @@ sudo docker pull debian:stretch # si registry-1.docker.io est dans /etc/hosts
 sudo docker pull gitlab-registry.forge.diplomatie.gouv.fr/library/debian:stretch # sinon
 ```
 
-J'ai souvent consulté `/etc/docker/certs.d/artifactory-registry.domain.com/`.
+Location certificats `/etc/docker/certs.d/artifactory-registry.domain.com/`.
 
-Au bout du rouleau ? il reste une solution (spécifique au MAE je pense):
+more conf ? (chrqls -> imp.)
+
+Au bout du rouleau ? (à déplacer)
 ```
 sudo apt -V install gnupg2 pass
 ```
