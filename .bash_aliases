@@ -1,12 +1,9 @@
 # --- PATH ---
-export PATH_USER='/c/Users/chrqls'
-export PATH_PROJECTS=$PATH_USER'/projects'
-export PATH_FRONT=$PATH_PROJECTS'/gobox-front'
-export PATH_BACK=$PATH_PROJECTS'/auvray-back-end'
-export PATH_ZSH='~/.zshrc'
-export PATH_COLA='/c/Program\ Files\ (x86)'
-
-export REST_URL=http://127.0.0.1:8080/Bridge
+PATH_PROJECTS='~/projects'
+PATH_FRONT=$PATH_PROJECTS'/gobox-front'
+PATH_BACK=$PATH_PROJECTS'/auvray-back-end'
+PATH_ZSH='~/.zshrc'
+PATH_COLA='/c/Program\ Files\ (x86)'
 
 # GENERAL
 alias ll='ls -lAF'
@@ -16,30 +13,21 @@ alias editzsh='vi '$PATH_ZSH
 alias editaliases='vi '$PATH_PROJECTS'/aliases/.bash_aliases'
 alias bhl='bash -l'
 alias zhl='zsh -l'
+alias ktm="kitematic --no-sandbox &"
 
-## Project
+# PROJECTS
 GET() {
-    curl -H 'User:quelosch' -H 'Password:kikooL0l' 'http://127.0.0.1:8080/Bridge/rest/'$1
-}
-startFront() {
-  if [ -z $1 ]
-    then
-      ng serve --delete-output-path=false --port=4201 --host 127.0.0.1 --proxy-config ./node_modules/fwk-angular/proxy.conf.js
-    else
-      ng serve --delete-output-path=false --port=$1 --host 127.0.0.1 --proxy-config ./node_modules/fwk-angular/proxy.conf.js
-  fi
+    curl -H 'User:chrqls' -H 'Password:Passw0rd' 'http://127.0.0.1:8080/api/'$1
 }
 #alias esl='npm run lint'
-alias postgirl=GET
-alias start=startFront
+#alias postgirl=GET
 alias npml='npm list --depth=0' # -g
-#alias my_json_server='clear && json-server --watch D:/path/to/database.json --routes D:/path/to/routes.json'
 alias goh='cd ~'
-alias gou='cd '$PATH_USER
 alias gop='cd '$PATH_PROJECTS
-alias gof='cd '$PATH_FRONT
-alias gob='cd '$PATH_BACK
-#alias mmvn='mvn clean install -rf vsc-aftersale-libext/ -DskipTests -T 1C'
+alias bfr='cd '$PATH_PROJECT'/bfr'
+alias crrv='cd '$PATH_PROJECT'/crrv-projet'
+alias gof='cd '$PATH_PROJECT'/generique-ui'
+alias gob='cd '$PATH_PROJECT'/generique-api'
 
 # GIT
 ## Stash
@@ -83,13 +71,13 @@ alias gm=formattedMessage
 alias gac=autoCommit
 
 alias gc='git commit -m'
-alias gca='git commit --amend --no-edit'
+alias gca='git commit --amend' # plus besoin du --no-edit ?
 
 alias gf='git fetch' # -p
 alias pull='git pull origin'
 alias gpr='git pull --rebase origin'
 alias push='git push origin'
-alias pushb='git push --set-upstream origin'
+alias pushb='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 
 rebaseCommits() {
     git rebase -i HEAD~$1 
