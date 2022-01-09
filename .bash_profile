@@ -1,2 +1,2 @@
-. ~/.bash_prompt
-. /Users/chrqls/Documents/github\ forks/aliases/.bash_aliases
+. ~/projects/aliases/.bash_prompt
+. ~/projects/aliases/.bash_aliases

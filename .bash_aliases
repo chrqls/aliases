@@ -24,10 +24,6 @@ GET() {
 alias npml='npm list --depth=0' # -g
 alias goh='cd ~'
 alias gop='cd '$PATH_PROJECTS
-alias bfr='cd '$PATH_PROJECT'/bfr'
-alias crrv='cd '$PATH_PROJECT'/crrv-projet'
-alias gof='cd '$PATH_PROJECT'/generique-ui'
-alias gob='cd '$PATH_PROJECT'/generique-api'
 
 # GIT
 ## Stash
@@ -35,7 +31,7 @@ stashShow() {
     git stash show -p stash@{$1} 
 }
 stashPop() {
-    git stash pop stash@{$1} 
+    git stash pop stash@{$1}
 }
 stashDrop()  {
     git stash drop stash@{$1}
