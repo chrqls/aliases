@@ -1,2 +1,3 @@
-. ~/projects/aliases/.bash_prompt
-. ~/projects/aliases/.bash_aliases
+EDITOR=vi
+. /home/chrqls/projects/aliases/.bash_prompt
+. /home/chrqls/projects/aliases/.bash_aliases
